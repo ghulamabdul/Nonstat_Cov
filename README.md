@@ -1,5 +1,3 @@
-# Nonstat_Cov
-
 # Estimation of Spatial Deformation for Nonstationary Processes via Variogram Alignment
 <img align="right" src="https://github.com/ghulamabdul/Nonstat_Cov/blob/master/p1cover.png" alt="drawing" width="400"/>
 
