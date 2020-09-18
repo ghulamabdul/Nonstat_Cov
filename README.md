@@ -1,7 +1,7 @@
 # Nonstat_Cov
 
 # Estimation of Spatial Deformation for Nonstationary Processes via Variogram Alignment
-<img align="right" src="https://github.com/ghulamabdul/Asymm_cross_cov/blob/master/promoimage.asym.png" alt="drawing" width="400"/>
+<img align="right" src="https://github.com/ghulamabdul/Nonstat_Cov/blob/master/p1cover.png" alt="drawing" width="400"/>
 
 
 This repository provides reproducible code for the manuscript titled *Estimation of Spatial Deformation for Nonstationary Processes via Variogram Alignment* by Ghulam A. Qadir, Sebastian Kurtek, and Ying Sun. The manuscript describes a new approach to model nonstationary covariance function of a univariate spatial process.
