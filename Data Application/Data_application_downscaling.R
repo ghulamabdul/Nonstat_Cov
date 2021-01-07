@@ -753,23 +753,26 @@ pl_nons.corr<-def_cov[1:length(f.grid$x),1:length(f.grid$x)]/def_cov[1,1] ### co
 pl_h_geo<-h_geo[1:length(f.grid$x),]
 
 set.seed(10)
-rand.pl.index<-sample(1:2500,9)
+rand.pl.index<-sample(1:2500,10)
 temp_cat<-numeric()
 temp_locs<-NULL
-for(i in 1:9)
+for(i in 1:10)
 {
   temp_cat<-c(temp_cat,pl_nons.corr[rand.pl.index[i],])
   temp_locs<-c(temp_locs,paste("Location ",i))
 }
 
 
-data_heat<-data.frame(x=rep(pl_h_geo$x,times=9),
-                      y=rep(pl_h_geo$y,times=9),
+data_heat<-data.frame(x=rep(pl_h_geo$x,times=10),
+                      y=rep(pl_h_geo$y,times=10),
                       z=temp_cat,
                       locs=rep(temp_locs,each=length(pl_h_geo$x)))
-
+data_heat$locs<-factor(data_heat$locs,levels = c("Location  1","Location  2","Location  3","Location  4","Location  5","Location  6", 
+                                                 "Location  7","Location  8","Location  9","Location  10" ))
 ggplot(data_heat, aes(x=x, y=y))+geom_point(data = data_heat, aes(x, y, colour = z),pch=19, size=2) +
-  facet_wrap(~locs)+scale_color_viridis("",option = "D")+labs(x="Longitude",y="Latitude")
+  facet_wrap(~locs,ncol=5)+scale_color_viridis("",option = "D")+labs(x="Longitude",y="Latitude")+theme(axis.text = element_text(size=9))
+
+
 
 ##############################################################################
 ############ Prediction surfaces and prediction standard deviations ##########
